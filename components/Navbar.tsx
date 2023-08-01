@@ -21,7 +21,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
   return (
     <div className="fixed w-full z-50 flex justify-between items-center py-2 px-4 border-b  border-primary/10 bg-secondary h-16">
       <div className="flex items-center">
-        <MobileSidebar />
+        <MobileSidebar isPro />
         <Link href="/">
           <h1
             className={cn(
@@ -40,7 +40,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
           <Sparkle className="h-4 w-4 fill-white ml-2 " />
         </Button>
         <ModeToggle />
-        <UserButton />
+        <UserButton afterSignOutUrl="/" />
       </div>
     </div>
   );
