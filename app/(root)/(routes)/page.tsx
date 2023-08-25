@@ -22,13 +22,13 @@ async function RootPage({ searchParams }: RootPageProps) {
       createdAt: "desc",
     },
 
-    // include: {
-    //   _count: {
-    //     select: {
-    //       messages: true,
-    //     },
-    //   },
-    // },
+    include: {
+      _count: {
+        select: {
+          messages: true,
+        },
+      },
+    },
   });
 
   const categories = await prismadb.category.findMany();
